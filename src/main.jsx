@@ -1,12 +1,15 @@
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import { AuthProvider } from './state/auth.jsx'
 import App from './App.jsx'
 import './index.css'
 
 const Root = () => {
   return (
     <BrowserRouter>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </BrowserRouter>
   )
 }

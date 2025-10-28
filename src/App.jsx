@@ -8,6 +8,13 @@ import Cart from './pages/Cart.jsx'
 import Checkout from './pages/Checkout.jsx'
 import OrdersMe from './pages/OrdersMe.jsx'
 import OrderTrack from './pages/OrderTrack.jsx'
+import Login from './pages/auth/Login.jsx'
+import Register from './pages/auth/Register.jsx'
+import AdminDashboard from './pages/admin/AdminDashboard.jsx'
+import AdminOrdersLive from './pages/admin/AdminOrdersLive.jsx'
+import AdminOrderStatus from './pages/admin/AdminOrderStatus.jsx'
+import AdminAccounting from './pages/admin/AdminAccounting.jsx'
+import RequireAuth from './components/RequireAuth.jsx'
 import Header from './components/Header.jsx'
 import './index.css'
 
@@ -31,9 +38,15 @@ const App = () => {
               <Route path="/menu" element={<Menu />} />
               <Route path="/menu/:id" element={<MenuItemDetail />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/checkout" element={<Checkout />} />
-              <Route path="/orders" element={<OrdersMe />} />
-              <Route path="/orders/:id" element={<OrderTrack />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/checkout" element={<RequireAuth><Checkout /></RequireAuth>} />
+              <Route path="/orders" element={<RequireAuth><OrdersMe /></RequireAuth>} />
+              <Route path="/orders/:id" element={<RequireAuth><OrderTrack /></RequireAuth>} />
+              <Route path="/admin" element={<RequireAuth roles={['admin','staff']}><AdminDashboard /></RequireAuth>} />
+              <Route path="/admin/live" element={<RequireAuth roles={['admin','cook','staff']}><AdminOrdersLive /></RequireAuth>} />
+              <Route path="/admin/status" element={<RequireAuth roles={['admin','cook','courier','staff']}><AdminOrderStatus /></RequireAuth>} />
+              <Route path="/admin/accounting" element={<RequireAuth roles={['admin','staff']}><AdminAccounting /></RequireAuth>} />
             </Routes>
           </motion.div>
         </AnimatePresence>

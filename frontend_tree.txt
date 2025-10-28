@@ -1,0 +1,38 @@
+.
+├── .env.development
+├── .env.production
+├── eslint.config.js
+├── frontend_tree.txt
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── public
+│   ├── favicon.ico
+│   └── vite.svg
+├── README.md
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── logo.png
+│   │   └── react.svg
+│   ├── components
+│   │   ├── Header.jsx
+│   │   └── Logo.tsx
+│   ├── index.css
+│   ├── layouts
+│   │   └── RootLayout.jsx
+│   ├── main.jsx
+│   └── pages
+│       ├── Cart.jsx
+│       ├── Checkout.jsx
+│       ├── Landing.jsx
+│       ├── MenuItemDetail.jsx
+│       ├── Menu.jsx
+│       ├── OrdersMe.jsx
+│       └── OrderTrack.jsx
+├── tailwind.config.js
+└── vite.config.js
+
+6 directories, 29 files
