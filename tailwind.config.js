@@ -8,7 +8,8 @@ export default {
           paper: "rgba(255,255,255,0.65)",
           ink: "#111111",
           red: "#D7263D",
-          gold: "#C59D5F"
+          gold: "#C59D5F",
+          yellow: "#FFD000"
         }
       },
       boxShadow: {

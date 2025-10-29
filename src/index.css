@@ -1,16 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import "tailwindcss";
 
-body {
-  font-family: "Luckiest Guy", sans-serif;
-  background-color: #870f11;
-  color: #fff;
-}
-
 :root {
   --color-primary: #870f11;
   --color-accent: #ffd000;
   --color-bg: #870f11;
   --color-text: #ffffff;
   --color-dark: #1a1a1a;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "Luckiest Guy", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.theme-yellow {
+  --color-bg: #ffd000;
+  --color-text: #111111;
 }
